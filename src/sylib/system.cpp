@@ -1,4 +1,4 @@
-#include "system.hpp"
+#include "sylib/system.hpp"
 #include "sylib/env.hpp"
 #include "sylib/addrled.hpp"
 #include <iostream>
@@ -49,8 +49,8 @@ namespace sylib {
     void SylibDaemon::startSylibDaemon(){
         static bool daemonStarted = false;
         if (!daemonStarted) {
-            sylib::Task managerTask = sylib::Task(managerTaskFunction);
-            managerTask.set_priority(15);
+            auto managerTask = std::make_unique<sylib::Task>(managerTaskFunction);
+            managerTask->set_priority(15);
             daemonStarted = true;
         }
     }

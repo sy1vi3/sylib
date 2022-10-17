@@ -119,7 +119,7 @@ namespace sylib {
 	        ~SylibDaemon();
 	        SylibDaemon(const SylibDaemon&);
 	        const SylibDaemon& operator=(const SylibDaemon&);
-            std::optional<sylib::Task> managerTask;
+            std::unique_ptr<sylib::Task> managerTask = nullptr;
             static int subTasksCreated;
             static std::vector<sylib::Device*>& getLivingSubtasks();
             static int frameCount;

@@ -1,8 +1,9 @@
-#include "env.hpp"
-#include "pros/adi.h"
+#include "sylib/env.hpp"
 #include "sylib/addrled.hpp"
-#include "sylib_apitypes.hpp"
-#include "system.hpp"
+#include "sylib/sylib_apitypes.hpp"
+#include "sylib/system.hpp"
+
+
 #include "vex/v5_api.h"
 #include "vex/v5_apitypes.h"
 #include <algorithm>

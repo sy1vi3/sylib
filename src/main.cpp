@@ -57,10 +57,13 @@ void autonomous() {}
  * operator control task will be stopped. Re-enabling the robot will restart the
  * task, not resume it from where it left off.
  */
+ auto led1 = sylib::Addrled(1,1,24);
 void opcontrol() {
-	pros::Controller master(pros::E_CONTROLLER_MASTER);
+	
 
-
+	
+	led1.gradient(0x00FF00, 0x0000FF, 0, 0, false, true);
+	led1.cycle(*led1, 15);
 	std::uint32_t current_time = sylib::millis();
 	while (true) {
 		
