@@ -8,6 +8,11 @@ This value is calculated by a currently unknown process running onboard the moto
 The motor-reported velocity value is incredibly noisy, and as such is not really appropriate
 for precise velocity control like is needed on a flywheel.
 
+![image](https://user-images.githubusercontent.com/54775775/196342175-06b89e8d-0a9d-4066-a313-a3ff625e5f1c.png)
+
+This is a graph of velocity vs time. The purple dots are the velocity values reported by the motors, the yellow dots are
+the sylib estimator. 
+
 The motors also have a method for finding the raw tick count of their internal encoders.
 This value is much less noisy, but it is also problematic in its own way.
 Internally, the motors seem to update their telemetry information every 5ms,
@@ -18,6 +23,8 @@ the new information provided makes up 2 update frames worth of data.
 Or at least, this is how it's supposed to work.
 In reality, the motors don't update every 5ms. They update almost every 5ms.
 About 1 in every 20 times, the time gap between frames is 4ms, and rarer still it takes 6ms.
+
+
 
 Most of the time this is not a problem, because if the motor updates a few
 milliseconds before sending information to the brain, the ticks that happen
@@ -37,10 +44,16 @@ When this happens, one 10ms time period from the brain's perspective contains on
 worth of data, followed shortly (one or two updated later) by a 10ms time
 period consisting of 15ms worth of data.
 
+![image](https://user-images.githubusercontent.com/54775775/196343223-3b2498c6-edf3-43e3-9610-f09d0cd1187e.png)
+
+
 When calculating velocity by taking the difference in motor ticks every 10ms and dividing
 by time, this results in every so often the calculated velocity value being 0.5x what
 it actually is, mirrored shortly after by the calculation outputting a value 1.5x where
 it should be.
+
+![image](https://user-images.githubusercontent.com/54775775/196343073-dedf0299-b160-4226-ad0b-0de2d23bbca4.png)
+
 
 In order to address this, in addition to polling for tick count information,
 sylib also polls motors for their own internal record of what time their information
@@ -61,7 +74,11 @@ Sylib uses several kinds of filters to take the raw velocity calculation and tur
 into something usable. It primarily used a 3-tap simple moving average, meaning that
 it considers the current and last values, and outputs their mean.
 
-this gets most of the way there, but the value still isn't smooth like it should be.
+![image](https://user-images.githubusercontent.com/54775775/196342767-395ddba2-3fc9-4213-83fa-0fbded242464.png)
+This graph shows velocity vs time. The purple cloud is the motor-reported velocity values,
+and the orange is the output of the sma filter only. 
+
+This gets most of the way there, but the value still isn't smooth like it should be.
 To accomplish smoothing, the output of the sma filter is fed into an exponential moving
 average filter, which outputs the current input value times a constant, summed with
 the previous output value multipled by 1 minus that constant.A lower constant will result
