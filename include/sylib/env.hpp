@@ -4,22 +4,22 @@
  * \brief Includes needed PROS or VEXcode header files, depending on which enviroment is being used
  */
 
+#include <stdint.h>
+
+#include <algorithm>
 #include <array>
 #include <atomic>
 #include <cmath>
 #include <cstddef>
+#include <cstdint>
 #include <deque>
+#include <initializer_list>
 #include <iostream>
 #include <memory>
+#include <mutex>
+#include <queue>
 #include <stdexcept>
 #include <string>
-#include <queue>
-#include <algorithm>
-#include <mutex>
-#include <vector>
-#include <cstdint>
-#include <initializer_list>
-#include <stdint.h>
 #include <vector>
 
 #define SYLIB_SRC_PRESENT
@@ -38,6 +38,8 @@
 #endif
 
 extern "C" {
-    int32_t  vexAdiAddrLedSet( uint32_t index, uint32_t port, uint32_t *pData, uint32_t nOffset, uint32_t nLength, uint32_t options );
-    int32_t vexDeviceAdiAddrLedSet( V5_DeviceT device, uint32_t port, uint32_t *pData, uint32_t nOffset, uint32_t nLength, uint32_t options );
+int32_t vexAdiAddrLedSet(uint32_t index, uint32_t port, uint32_t* pData, uint32_t nOffset,
+                         uint32_t nLength, uint32_t options);
+int32_t vexDeviceAdiAddrLedSet(V5_DeviceT device, uint32_t port, uint32_t* pData, uint32_t nOffset,
+                               uint32_t nLength, uint32_t options);
 }

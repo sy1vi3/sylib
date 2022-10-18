@@ -1,0 +1,10 @@
+---
+BasedOnStyle: Google
+IndentWidth: 4
+---
+Language: Cpp
+DerivePointerAlignment: false
+PointerAlignment: Left
+SeparateDefinitionBlocks : Always
+ColumnLimit: 100
+AlignConsecutiveAssignments: Consecutive
