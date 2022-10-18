@@ -2,7 +2,8 @@
 
 Sylib provides an easy-to-use API for controlling WS2812B (Neopixel) LEDs
 
-![Pretty lights](https://imgur.com/a/XQ9Btip)
+![pretty lights](https://user-images.githubusercontent.com/54775775/196319983-b07b49c9-51d7-4f72-9aa1-8d6471a6ab59.png)
+
 
 ## Hardware
 To use these lights with a V5 brain, some custom wiring is needed. It is fairly simple, but some soldering is needed. 
@@ -16,7 +17,7 @@ I reccomend cutting up a VEX 3-wire extension cable in order to aquire a cable t
 
 Make sure to attach the wires to the correct side of the light strip, because they are directioned
 
-![Wiring](https://imgur.com/9WN9Z6Q)
+![wiring](https://user-images.githubusercontent.com/54775775/196319956-f08a94a9-01dd-4cc4-9559-bf5ddf4fa985.png)
 
 ## Software
 
