@@ -49,5 +49,6 @@ This project would not have been possible without the contributions of
 - Griffin Tabor
 - Nick Mertin
 - Andrew Strauss
+- Jamie Maki-Fern
 - The PROS devlopment team
 
