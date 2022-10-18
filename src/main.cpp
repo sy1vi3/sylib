@@ -72,7 +72,7 @@ void opcontrol() {
 	}
 	led1.set_buffer(colors);
 
-	led1.pulse(0xF5A9B8 , 2, 10);
+	led1.color_shift(64 , 0, -127);
 	
     std::uint32_t current_time = sylib::millis();
     while (true) {

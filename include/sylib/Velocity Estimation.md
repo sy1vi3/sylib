@@ -2,7 +2,7 @@
 
 Sylib has its own system for calculating a V5 Smart Motor's velocity from information provided by its internal encoder. 
 
-In PROS, the get_actual_velocity function is a bit of a misnomer.
+In PROS, the `get_actual_velocity` function is a bit of a misnomer.
 It doesn't get the "actual" motor velocity, it gets the value reported by the motor itself.
 This value is calculated by a currently unknown process running onboard the motor.
 The motor-reported velocity value is incredibly noisy, and as such is not really appropriate
