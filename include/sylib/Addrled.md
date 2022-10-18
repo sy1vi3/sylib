@@ -6,7 +6,7 @@ Sylib provides an easy-to-use API for controlling WS2812B (Neopixel) LEDs
 
 
 ## Hardware
-To use these lights with a V5 brain, some custom wiring is needed. It is fairly simple, but some soldering is needed. 
+To use these lights with a V5 brain, some custom wiring is needed. It is fairly simple, but some soldering is required. 
 
 I reccomend cutting up a VEX 3-wire extension cable in order to aquire a cable that can easily plug into the brain's ADI ports. 
 
