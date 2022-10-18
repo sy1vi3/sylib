@@ -4,6 +4,8 @@
  
 Sylvie's C++ Library For V5
 
+![image](https://user-images.githubusercontent.com/54775775/196351036-5dd36faf-fd10-4e11-92d5-7a2eeff876a7.png)
+
 ## Features
 
 - Easy WS2812B Addressable LED control
@@ -36,6 +38,17 @@ Sylvie's C++ Library For V5
 
 4) Include `sylib/sylib.hpp` anywhere relevant, probably including at the top of your `main.cpp` file
 
-## Docs
 
-Documentation for Sylib can be found [here]
+## Acknowledgements
+
+This project would not have been possible without the contributions of
+
+- Leo Riesenbach
+- Lachlan Davidson
+- James Pearman
+- Griffin Tabor
+- Nick Mertin
+- Andrew Strauss
+- Jamie Maki-Fern
+- Salmon
+- The PROS devlopment team
