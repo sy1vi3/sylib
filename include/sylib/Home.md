@@ -51,4 +51,3 @@ This project would not have been possible without the contributions of
 - Andrew Strauss
 - Jamie Maki-Fern
 - Salmon
-- The PROS development team
