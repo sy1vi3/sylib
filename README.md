@@ -3,6 +3,9 @@
 
 Sylvie's C++ Library For V5
 
+![image](https://user-images.githubusercontent.com/54775775/196351036-5dd36faf-fd10-4e11-92d5-7a2eeff876a7.png)
+
+
 ## Features
 
 - Easy WS2812B Addressable LED control
