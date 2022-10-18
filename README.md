@@ -38,3 +38,16 @@ Sylvie's C++ Library For V5
 ## Docs
 
 Documentation for Sylib can be found [here]
+
+## Acknowledgements
+
+This project would not have been possible without the contributions of
+
+- Leo Riesenbach
+- Lachlan Davidson
+- James Pearman
+- Griffin Tabor
+- Nick Mertin
+- Andrew Strauss
+- The PROS devlopment team
+
