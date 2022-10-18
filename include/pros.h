@@ -1,3 +1,4 @@
+#pragma once
 #include "api.h"
 #include "vex/v5_api.h"
 #include "vex/v5_apitypes.h"

@@ -1,6 +1,4 @@
 #include "main.h"
-#include "sylib/system.hpp"
-#include <cstdint>
 
 
 /**
@@ -10,7 +8,7 @@
  * to keep execution time for this mode under a few seconds.
  */
 void initialize() {
-	sylib::SylibDaemon::startSylibDaemon();
+	sylib::SylibDaemon::getInstance().startSylibDaemon();
 }
 
 /**
@@ -57,17 +55,14 @@ void autonomous() {}
  * operator control task will be stopped. Re-enabling the robot will restart the
  * task, not resume it from where it left off.
  */
- auto led1 = sylib::Addrled(1,1,24);
+
 void opcontrol() {
 	
-
-	
+	auto led1 = sylib::Addrled(1,1,24);
 	led1.gradient(0x00FF00, 0x0000FF, 0, 0, false, true);
 	led1.cycle(*led1, 15);
 	std::uint32_t current_time = sylib::millis();
 	while (true) {
-		
-
 		sylib::delay_until(&current_time, 10);
 	}
 }

@@ -4,13 +4,6 @@
 #include "sylib/system.hpp"
 
 
-#include "vex/v5_api.h"
-#include "vex/v5_apitypes.h"
-#include <algorithm>
-#include <cmath>
-#include <cstdint>
-#include <vector>
-
 
 namespace sylib{
     Addrled::Addrled(const uint8_t smart_port, const uint8_t adi_port, const uint8_t strip_length, std::vector<uint32_t> colors) : 
@@ -91,7 +84,6 @@ namespace sylib{
             }
             lightOutput = buffer;
             for(int i = 0; i < ((int)((currentTime - cycleStartMovementTime)/controlSpeed - cyclePixelsShifted)); i++){
-            // if(currentTime > cycleStartMovementTime+controlSpeed*(cyclePixelsShifted+1)){      
                 if(!cycleControlReversed){
                     std::rotate(rotation_buffer.begin(), rotation_buffer.end() - 1, rotation_buffer.end());
                 }

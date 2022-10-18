@@ -1,8 +1,6 @@
 #include "sylib/system.hpp"
 #include "sylib/env.hpp"
 #include "sylib/addrled.hpp"
-#include <iostream>
-#include <stdint.h>
 
 namespace sylib {
     void delay_until(std::uint32_t* const prev_time, const std::uint32_t delta){
@@ -31,12 +29,14 @@ namespace sylib {
     uint64_t micros(){
         return vexSystemHighResTimeGet();
     }
-    #ifndef SYLIB_PROS_ENV
+    #ifdef SYLIB_ENV_PROS
     bool Mutex::take(){lock(); return 1;}
     bool Mutex::give(){unlock(); return 1;}
+    #else
+    bool Mutex::try_lock_for(){return try_lock();}
+    bool Mutex::try_lock_until(){return try_lock();}
     #endif
-    bool Mutex::try_lock_for(){return 0;}
-    bool Mutex::try_lock_until(){return 0;}
+    
 
     Mutex sylib_port_mutexes[V5_MAX_DEVICE_PORTS]; 
     Mutex sylib_controller_mutexes[2];
@@ -49,8 +49,10 @@ namespace sylib {
     void SylibDaemon::startSylibDaemon(){
         static bool daemonStarted = false;
         if (!daemonStarted) {
-            auto managerTask = std::make_unique<sylib::Task>(managerTaskFunction);
+            managerTask = std::unique_ptr<sylib::Task>(new sylib::Task(managerTaskFunction));
+            #ifdef SYLIB_ENV_PROS
             managerTask->set_priority(15);
+            #endif
             daemonStarted = true;
         }
     }
@@ -194,4 +196,8 @@ namespace sylib {
     int Device::getUpdateOffset(){mutex_lock _lock(mutex); return updateOffset;}
     void Device::update(){
     }
+
+     void initialize(){
+        sylib::SylibDaemon::getInstance().startSylibDaemon();
+     }
 }

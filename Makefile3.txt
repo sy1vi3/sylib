@@ -1,4 +1,0 @@
-BINDIR=./bin
-
-target:
-	ar rcs sylib.a ./bin/sylib/addrled.cpp.o ./bin/sylib/math.cpp.o ./bin/sylib/motor.cpp.o ./bin/sylib/sylib.cpp.o ./bin/sylib/system.cpp.o

@@ -1,9 +1,5 @@
 #include "sylib/motor.hpp"
 #include "sylib/env.hpp"
-#include <cmath>
-#include <cstdint>
-#include <memory>
-#include <stdint.h>
 
 #define mg_foreach(func_call, motors) \
 	for (int i = 0; i < motors.size(); i++) { \

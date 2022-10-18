@@ -19,6 +19,11 @@ namespace sylib {
     typedef vex::mutex PlatformMutex;
     typedef vex::task PlatformTask;
     #endif
+    
+    /**
+    * \brief Starts Sylib background processes. Called by the user in initialize()
+    */
+    void initialize();
 
     /**
     * \brief Delays the current task until a set time
@@ -143,7 +148,7 @@ namespace sylib {
             * \brief Starts the Sylib daemon. This should be called in initialize() or
             * pre_auton()
             */
-            static void startSylibDaemon();
+            void startSylibDaemon();
 
             /**
             * \brief Gets the single existing SylibDaemon object,

@@ -13,7 +13,6 @@
 
 #include "env.hpp"
 #include "system.hpp"
-#include "vex/v5_apitypes.h"
 #include "sylib/sylib_apitypes.hpp"
 #include <cstdint>
 #include <vector>

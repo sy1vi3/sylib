@@ -5,7 +5,6 @@
 #include "vex/v5_apiprivate.h"
 #include "vex/v5_apiuser.h"
 #include "vex/v5_color.h"
-#include "vex/v5_addrled.h"
 
 #include "vex/vex_event.h"
 #include "vex/vex_mevent.h"
