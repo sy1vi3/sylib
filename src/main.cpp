@@ -1,6 +1,7 @@
 #include "main.h"
 #include "sylib/system.hpp"
 #include <cstdint>
+#include <vector>
 
 
 /**
@@ -10,7 +11,7 @@
  * to keep execution time for this mode under a few seconds.
  */
 void initialize() {
-	sylib::SylibDaemon::startSylibDaemon();
+	sylib::initialize();
 }
 
 /**
@@ -62,6 +63,17 @@ auto led1 = sylib::Addrled(1, 1, 24);
 void opcontrol() {
     led1.gradient(0x00FF00, 0x0000FF, 0, 0, false, true);
     led1.cycle(*led1, 15);
+	auto colors = std::vector<std::uint32_t>();
+	colors.resize(16);
+
+
+	for(int i = 0; i < colors.size(); i++){
+		colors[i] = sylib::Addrled::rgb_to_hex(64, 64, i * 15);
+	}
+	led1.set_buffer(colors);
+
+	led1.pulse(0xF5A9B8 , 2, 10);
+	
     std::uint32_t current_time = sylib::millis();
     while (true) {
         sylib::delay_until(&current_time, 10);
