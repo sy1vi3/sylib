@@ -1,7 +1,7 @@
 
-# Sylib
+# <img src="https://user-images.githubusercontent.com/54775775/196320183-4a1c638d-7d49-4359-8934-6df999b3f63e.png" width="70" /> Sylib
 
-A C++ Library For V5
+Sylvie's C++ Library For V5
 
 ## Features
 
@@ -9,6 +9,8 @@ A C++ Library For V5
 - Accurate motor velocity measurements
 - Template for making custom velocity controllers
 - Many kinds of pre-built filters for general use
+- Platform-agnostic, meaning it works with both PROS and VEXcode
+
 
 ## Installation
 
