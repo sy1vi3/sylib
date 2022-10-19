@@ -1,4 +1,5 @@
 #include "main.h"
+#include "sylib/motor.hpp"
 #include "sylib/system.hpp"
 #include <cstdint>
 #include <vector>
@@ -10,9 +11,7 @@
  * All other competition modes are blocked by initialize; it is recommended
  * to keep execution time for this mode under a few seconds.
  */
-void initialize() {
-	sylib::initialize();
-}
+
 
 /**
  * Runs while the robot is in the disabled state of Field Management System or
@@ -58,24 +57,29 @@ void autonomous() {}
  * operator control task will be stopped. Re-enabling the robot will restart the
  * task, not resume it from where it left off.
  */
-auto led1 = sylib::Addrled(1, 1, 24);
+
+void initialize() {
+	// Initialize sylib background processes
+	sylib::initialize();
+}
 
 void opcontrol() {
-    led1.gradient(0x00FF00, 0x0000FF, 0, 0, false, true);
-    led1.cycle(*led1, 15);
-	auto colors = std::vector<std::uint32_t>();
-	colors.resize(16);
+    
+	// Create an addrled object
+	auto addrled = sylib::Addrled(1,1,64);
 
+	// Set the LED strip to a gradient in HSV color space
+	// that displays a full range of hues
+	addrled.gradient(0xFF0000, 0xFF0005, 0, 0, false, true);
 
-	for(int i = 0; i < colors.size(); i++){
-		colors[i] = sylib::Addrled::rgb_to_hex(64, 64, i * 15);
-	}
-	led1.set_buffer(colors);
-
-	led1.color_shift(64 , 0, -127);
+	// Cycle the colors at speed 10
+	addrled.cycle(*addrled, 10);
 	
-    std::uint32_t current_time = sylib::millis();
+	// Store the time at the start of the loop
+    std::uint32_t clock = sylib::millis();
     while (true) {
-        sylib::delay_until(&current_time, 10);
+		
+		// 10ms delay to allow other tasks to run
+        sylib::delay_until(&clock, 10);
     }
 }

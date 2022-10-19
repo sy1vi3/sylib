@@ -27,6 +27,12 @@ Sylvie's C++ Library For V5
 
 4) In your `main.h` file, make sure to include `sylib/sylib.hpp`
 
+5) In `/include/sylib/env.hpp` make sure that `SYLIB_SRC_PRESENT` and `SYLIB_ENV_VEXCODE` are not defined, and that
+`SYLIB_ENV_PROS` is. This makes sure that the right headers are included, and that sylib uses the pre-compiled library
+provided by the template instead of trying to build it from the non-existent source (which would not compile in a PROS enviroment anyways).
+
+6) In your `initialize()` function, make sure to include `sylib::initialize();`
+
 
 ### VEXcode/VEX Visual Studio Code Extension
 
@@ -37,6 +43,12 @@ Sylvie's C++ Library For V5
 3) Copy the contents of the `src/` directory from the downloaded files into the `src/` directory of your project
 
 4) Include `sylib/sylib.hpp` anywhere relevant, probably including at the top of your `main.cpp` file
+
+5) In `/include/sylib/env.hpp` make sure that `SYLIB_ENV_PROS` is not defined, and that
+`SYLIB_ENV_VEXCODE` is. This makes sure that the right headers are included, and that sylib compiles
+the source code instead of trying to use the non-existent PROS template.
+
+6) In your pre-auton function, make sure to include `sylib::initialize();`
 
 
 ## Acknowledgements

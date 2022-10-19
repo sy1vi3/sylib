@@ -1,6 +1,7 @@
 # Compiled Object files
 *.o
 *.obj
+*.a
 
 # Executables
 *.bin
@@ -15,13 +16,27 @@ temp.log
 temp.errors
 *.ini
 .d/
-/include/vex/
-/include/pros/
-/include/display/
-/firmware/
-/include/api.h
-/include/main.h
+
+# Random
+docs/img
+docs/*.html
+docs/Doxyfile
+docs/*.ico
+docs/*.css
+docs/*.js
 project.pros
 Makefile
-common.mk
-docs/
+common.mk 
+*.csv
+
+
+# Headers
+include/vex
+include/pros
+include/display
+include/api.h
+include/main.h 
+
+
+# Source
+firmware/

@@ -207,8 +207,13 @@ void Motor::update() {
     } else {
         velocity = -motorVelocityTracker.getVelocity(position, internalClock);
     }
-    velocity_error = velocity_target - velocity;
-
+    if(sylib_control_mode == SylibMotorControlModeVelocityAUTO){
+        velocity_error = velocity_target*gearing/200 - velocity;
+    }
+    else{
+        velocity_error = velocity_target - velocity;
+    }
+    
     motorPController.update();
     motorIController.update();
     motorDController.update();
