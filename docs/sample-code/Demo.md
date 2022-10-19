@@ -96,7 +96,8 @@ void opcontrol() {
 This output can be piped into a CSV file using the method of your choosing.
 With a small amount of python code, it is trivial to generate graphs from this output
 
-![image](https://user-images.githubusercontent.com/54775775/196566142-75490337-9dd6-4088-946a-47b65936e8c3.png)
+![image](https://user-images.githubusercontent.com/54775775/196572663-ec65310b-9f3a-4372-95d1-bb1bd7e3acc5.png)
+
 
 
 ## Creating a Rainbow Pattern on LED Lights
