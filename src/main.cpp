@@ -63,23 +63,35 @@ void initialize() {
 	sylib::initialize();
 }
 
+sylib::SpeedControllerInfo flywheelController (
+        [](double rpm){return std::pow(M_E, (-0.001*rpm* 3600 / 3600 + 1)) + 3.125;}, // kV function
+        10, // kP
+        0.001, // kI
+        0, // kD
+        0, // kH
+        true, // anti-windup enabled
+        50, // anti-windup range
+        true, // p controller bounds threshold enabled
+        50, // p controller bounds cutoff enabled
+        0.01, // kP2 for when over threshold
+        50, // range to target to apply max voltage
+        false, // coast down enabled
+        0,  // coast down theshhold
+        1 // coast down constant
+);
+
 void opcontrol() {
     
 	// Create an addrled object
-	auto addrled = sylib::Addrled(1,1,64);
 
-	// Set the LED strip to a gradient in HSV color space
-	// that displays a full range of hues
-	addrled.gradient(0xFF0000, 0xFF0005, 0, 0, false, true);
-
-	// Cycle the colors at speed 10
-	addrled.cycle(*addrled, 10);
+	auto flywheel = sylib::Motor(17, 3600, true, flywheelController);
 	
 	// Store the time at the start of the loop
     std::uint32_t clock = sylib::millis();
     while (true) {
-		
+		flywheel.set_velocity_custom_controller(2700);
 		// 10ms delay to allow other tasks to run
+
         sylib::delay_until(&clock, 10);
     }
 }

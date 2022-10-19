@@ -55,7 +55,7 @@ double SylviesPogVelocityEstimator::getVelocity(double currentMotorTicks,
     previousInternalMotorClock = currentInternalMotorClock;
     oldMotorTicks = currentMotorTicks;
     rawVelocity = (dN / 50) / dT * 60000;
-    if (rawVelocity > 6000) {  // Motor position reset manually
+    if (std::abs(rawVelocity) > 5000) {  // Motor position reset manually
         return outputVelocity;
     }
     smaFilteredVelocity = smaFilterVelocity.filter(rawVelocity);
@@ -77,6 +77,7 @@ double SylviesPogVelocityEstimator::getVelocity(double currentMotorTicks,
     outputAcceleration = outputAccelSolver.solveDerivative(outputVelocity);
     outputJerk = outputJerkSolver.solveDerivative(outputAcceleration);
     outputSnap = outputSnapSolver.solveDerivative(outputJerk);
+
     return outputVelocity;
 }
 
@@ -213,7 +214,6 @@ void Motor::update() {
     else{
         velocity_error = velocity_target - velocity;
     }
-    
     motorPController.update();
     motorIController.update();
     motorDController.update();

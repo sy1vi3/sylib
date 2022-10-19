@@ -28,6 +28,7 @@ project.pros
 Makefile
 common.mk 
 *.csv
+*.py
 
 
 # Headers
