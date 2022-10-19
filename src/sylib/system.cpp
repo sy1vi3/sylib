@@ -242,7 +242,5 @@ int Device::getUpdateOffset() {
     return updateOffset;
 }
 
-void Device::update() {}
-
 void initialize() { sylib::SylibDaemon::getInstance().startSylibDaemon(); }
 }  // namespace sylib

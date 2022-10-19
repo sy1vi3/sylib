@@ -125,8 +125,8 @@ class SylibDaemon {
    private:
     SylibDaemon();
     ~SylibDaemon();
-    SylibDaemon(const SylibDaemon&);
-    const SylibDaemon& operator=(const SylibDaemon&);
+    SylibDaemon(const SylibDaemon&) = delete;
+    const SylibDaemon& operator=(const SylibDaemon&) = delete;
     std::unique_ptr<sylib::Task> managerTask = nullptr;
     static int subTasksCreated;
     static std::vector<sylib::Device*>& getLivingSubtasks();
@@ -328,7 +328,7 @@ class Device {
      * \brief Default device update function. This is overridden by classes that
      * inherit from Device for their own specific needs.
      */
-    virtual void update();
+    virtual void update() = 0;
 
     /**
      * \brief Gets whether or not the device update function is paused
