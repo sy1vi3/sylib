@@ -33,6 +33,8 @@ provided by the template instead of trying to build it from the non-existent sou
 
 6) In your `initialize()` function, make sure to include `sylib::initialize();`
 
+note: Sylib requires PROS kernel `3.7.2` or later to run
+
 
 ### VEXcode/VEX Visual Studio Code Extension
 
