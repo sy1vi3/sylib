@@ -1,6 +1,0 @@
-main.a1::C:/Users/cicad/Desktop/Important Programs/sylib/src/main.cpp
-addrled.a1::C:/Users/cicad/Desktop/Important Programs/sylib/src/sylib/addrled.cpp
-math.a1::C:/Users/cicad/Desktop/Important Programs/sylib/src/sylib/math.cpp
-motor.a1::C:/Users/cicad/Desktop/Important Programs/sylib/src/sylib/motor.cpp
-sylib.a1::C:/Users/cicad/Desktop/Important Programs/sylib/src/sylib/sylib.cpp
-system.a1::C:/Users/cicad/Desktop/Important Programs/sylib/src/sylib/system.cpp
