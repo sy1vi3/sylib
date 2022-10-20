@@ -58,7 +58,7 @@ class EMAFilter {
 class SMAFilter {
    private:
     std::queue<double> rawInputValues;
-    int sampleSize;
+    std::uint16_t sampleSize;
     double meanValue;
     double rawVelocityTotal;
 
@@ -358,13 +358,16 @@ class VoltageEstimation {
  */
 class ProportionalController {
    private:
-    std::shared_ptr<double> error;
+    
     double kP;
     double motorGearing;
-    double proportional;
+    std::shared_ptr<double> error;
+    double maxRange;
     bool maxRangeEnabled;
     double kP2;
-    double maxRange;
+    double proportional;
+    
+
 
    public:
     /**
@@ -461,15 +464,17 @@ class ProportionalController {
  */
 class IntegralController {
    private:
-    std::shared_ptr<double> error;
+    
     double kI;
-    double integral;
     double motorGearing;
+    std::shared_ptr<double> error;
+    bool antiWindupEnabled;
+    double antiWindupRange;
+    double integral;
     uint32_t currentTime;
     uint32_t previousTime;
     uint32_t dT;
-    bool antiWindupEnabled;
-    double antiWindupRange;
+    
 
    public:
     /**
@@ -572,12 +577,12 @@ class IntegralController {
  */
 class DerivativeController {
    private:
-    std::shared_ptr<double> error;
     double kD;
+    double motorGearing;
+    std::shared_ptr<double> error;
+    double derivative;
     double currentInput;
     double previousInput;
-    double derivative;
-    double motorGearing;
     uint32_t currentTime;
     uint32_t previousTime;
     uint32_t dT;

@@ -21,10 +21,10 @@ Addrled::Addrled(const uint8_t smart_port, const uint8_t adi_port, const uint8_t
     vexDeviceAdiPortConfigSet(device, adi_port - 1, kAdiPortTypeDigitalOut);
     buffer.resize(strip_length);
     colors.resize(strip_length);
-    for (int i = 0; i < strip_length; i++) {
+    for (std::size_t i = 0; i < strip_length; i++) {
         buffer[i] = 0x000000;
     }
-    for (int i = 0; i < colors.size(); i++) {
+    for (std::size_t i = 0; i < colors.size(); i++) {
         buffer[i] = colors[i];
     }
     addrledControlMode = SylibAddrledControlModeMANUAL;
@@ -79,7 +79,7 @@ void Addrled::update() {
     if (addrledControlMode == SylibAddrledControlModeMANUAL) {
         lightOutput = buffer;
     } else if (addrledControlMode == SylibAddrledControlModeCYCLE) {
-        for (int i = 0; i < buffer.size(); i++) {
+        for (std::size_t i = 0; i < buffer.size(); i++) {
             if (rotation_buffer[i] <= 0xFFFFFF) {
                 buffer[i] = rotation_buffer[i];
             }
@@ -101,7 +101,7 @@ void Addrled::update() {
     }
     if (sendingPulse) {
         preOverlayBuffer = buffer;
-        for (int i = 0; i < buffer.size(); i++) {
+        for (std::size_t i = 0; i < buffer.size(); i++) {
             if (template_buffer[i + (controlPulseWidth)] <= 0xFFFFFF) {
                 buffer[i] = template_buffer[i + (controlPulseWidth)];
             }
@@ -130,7 +130,7 @@ void Addrled::update() {
         buffer = preOverlayBuffer;
     }
     preOverlayBuffer = buffer;
-    for (int i = 0; i < buffer.size(); i++) {
+    for (std::size_t i = 0; i < buffer.size(); i++) {
         rgb shiftedColor;
         shiftedColor.r = hex_to_rgb(lightOutput[i]).r + redShift;
         shiftedColor.g = hex_to_rgb(lightOutput[i]).g + greenShift;
@@ -166,7 +166,7 @@ void Addrled::update() {
 void Addrled::set_all(std::uint32_t color) {
     mutex_lock _lock(sylib_port_mutexes[smart_port - 1]);
     addrledControlMode = SylibAddrledControlModeMANUAL;
-    for (int i = 0; i < buffer.size(); i++) {
+    for (std::size_t i = 0; i < buffer.size(); i++) {
         buffer[i] = color;
     }
 }
@@ -220,7 +220,7 @@ void Addrled::pulse(std::uint32_t color, int pulse_width, int speed, int start_p
     pixelsToMove = end_pixel - start_pos + (pulse_width)*2;
     buffer_saved = buffer;
     template_buffer.resize(buffer.size() + 2 * (pulse_width - 1));
-    for (int i = 0; i < buffer.size(); i++) {
+    for (std::size_t i = 0; i < buffer.size(); i++) {
         template_buffer[i] = 0xFFFFFFFF;
     }
     for (int i = 0; i < pulse_width; i++) {

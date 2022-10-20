@@ -1,4 +1,5 @@
 #include "sylib/math.hpp"
+#include <vector>
 
 #include "sylib/env.hpp"
 
@@ -56,11 +57,12 @@ double MedianFilter::filter(double rawValue) {
     }
     rawInputValues.push_back(rawValue);
     queueLength = rawInputValues.size();
-    double rawInputValuesArray[queueLength];
+    std::vector<double> rawInputValuesArray;
+    rawInputValuesArray.resize(queueLength);
     for (int i = 0; i < queueLength; i++) {
         rawInputValuesArray[i] = rawInputValues[i];
     }
-    std::sort(rawInputValuesArray, rawInputValuesArray + queueLength);
+    std::sort(rawInputValuesArray.begin(), rawInputValuesArray.end());
     medianValue = 0;
     if (queueLength % 2 == 0) {
         for (int i = 0; i < meanSizeEven; i++) {
@@ -110,11 +112,12 @@ double RangeExtremaFilter::filter(double rawValue) {
     }
     rawInputValues.push_back(rawValue);
     queueLength = rawInputValues.size();
-    double rawInputValuesArray[queueLength];
+    std::vector<double> rawInputValuesArray;
+    rawInputValuesArray.resize(queueLength);
     for (int i = 0; i < queueLength; i++) {
         rawInputValuesArray[i] = std::abs(rawInputValues[i]);
     }
-    std::sort(rawInputValuesArray, rawInputValuesArray + queueLength, std::greater<double>());
+    std::sort(rawInputValuesArray.begin(), rawInputValuesArray.end(), std::greater<double>());
     maxValue = rawInputValuesArray[0];
     return maxValue;
 }
@@ -152,7 +155,7 @@ double SympleDerivativeSolver::getCurrentDerivative() const { return derivativeF
 double SympleDerivativeSolver::getCurrentInputValue() const { return currentInputFunctionValue; }
 
 VoltageEstimation::VoltageEstimation(kv_fn_t kV, double motorGearing)
-    : motorGearing(motorGearing), kV(kV) {
+    : kV(kV), motorGearing(motorGearing) {
     voltageEstimate = 0;
 }
 
@@ -221,7 +224,6 @@ IntegralController::IntegralController(double kI, std::shared_ptr<double> error,
 }
 
 double IntegralController::update() {
-    static sylib::EMAFilter iControllerFilter = sylib::EMAFilter();
     currentTime = vexSystemTimeGet();
     dT = currentTime - previousTime;
     previousTime = currentTime;
@@ -269,7 +271,6 @@ DerivativeController::DerivativeController(double kD, std::shared_ptr<double> er
 }
 
 double DerivativeController::update() {
-    static sylib::EMAFilter dControllerFilter = sylib::EMAFilter();
     currentTime = vexSystemTimeGet();
     currentInput = *error;
     dT = currentTime - previousTime;

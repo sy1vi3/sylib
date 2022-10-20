@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.9"/>
+    <errors>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIPort&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIPort&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="67"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIAnalogIn&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIAnalogIn&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="146"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIAnalogOut&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIAnalogOut&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="261"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIDigitalOut&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIDigitalOut&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="313"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIDigitalIn&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIDigitalIn&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="360"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIMotor&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIMotor&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="423"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIEncoder&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIEncoder&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="499"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIUltrasonic&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIUltrasonic&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="564"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIGyro&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIGyro&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="632"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIPotentiometer&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIPotentiometer&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="678"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;ADIPotentiometer&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;ADIPotentiometer&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\adi.hpp" line="694"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;Gps&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;Gps&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\gps.hpp" line="33"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;Imu&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;Imu&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\imu.hpp" line="29"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;Controller&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;Controller&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\misc.hpp" line="39"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;Task&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;Task&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.hpp" line="62"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.hpp" line="194"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.hpp" line="269"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.hpp" line="384"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;Rotation&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;Rotation&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\rotation.hpp" line="30"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;Vision&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;Vision&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\vision.hpp" line="43"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;sig&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;sig&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\vision.hpp" line="323"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;Task&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;Task&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\sylib\system.hpp" line="108"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;SMAFilter&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;SMAFilter&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\sylib\math.hpp" line="74"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;RangeExtremaFilter&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;RangeExtremaFilter&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\sylib\math.hpp" line="212"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;VoltageEstimation&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;VoltageEstimation&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\sylib\math.hpp" line="314"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &amp;#039;SpeedControllerInfo&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Struct &amp;#039;SpeedControllerInfo&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\sylib\math.hpp" line="811"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;SylviesPogVelocityEstimator&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;SylviesPogVelocityEstimator&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\sylib\motor.hpp" line="74"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &amp;#039;Motor&amp;#039; has a constructor with 1 argument that is not explicit." verbose="Class &amp;#039;Motor&amp;#039; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\sylib\motor.hpp" line="293"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;speedController&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;speedController&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\sylib\motor.hpp" line="294"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\display\lv_objx\lv_win.h" line="258"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\display\lv_objx\lv_win.h" line="268"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;motor_ports&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;motor_ports&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\motors.hpp" line="863"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;link_id&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;link_id&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\pros\link.hpp" line="56"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;colors&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;colors&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="include\sylib\addrled.hpp" line="83"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\display\lv_misc\lv_task.h" line="59"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\display\lv_misc\lv_task.h" line="87"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="176"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="215"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="229"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="239"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="247"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="255"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="275"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="308"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="323"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="349"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &amp;#039;task&amp;#039; since the value of &amp;#039;task&amp;#039; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." sinceDate="M/d/yyyy">
+            <location file="include\pros\rtos.h" line="380"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;pattern&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;pattern&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="src/sylib/addrled.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="295"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;color_shift&amp;#039; is never used." verbose="The function &amp;#039;color_shift&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="320"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;cycle&amp;#039; is never used." verbose="The function &amp;#039;cycle&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="295"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_adi_port&amp;#039; is never used." verbose="The function &amp;#039;get_adi_port&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="60"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;gradient&amp;#039; is never used." verbose="The function &amp;#039;gradient&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="279"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;pulse&amp;#039; is never used." verbose="The function &amp;#039;pulse&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="204"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_all&amp;#039; is never used." verbose="The function &amp;#039;set_all&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="166"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_pixel&amp;#039; is never used." verbose="The function &amp;#039;set_pixel&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="174"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;turn_off&amp;#039; is never used." verbose="The function &amp;#039;turn_off&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="187"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;turn_on&amp;#039; is never used." verbose="The function &amp;#039;turn_on&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\addrled.cpp" line="192"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SympleDerivativeSolver::currentTime&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SympleDerivativeSolver::currentTime&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/math.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="131"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SympleDerivativeSolver::dT&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SympleDerivativeSolver::dT&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/math.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="131"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;TakeBackHalfController::previousTime&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;TakeBackHalfController::previousTime&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/math.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="300"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;TakeBackHalfController::dT&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;TakeBackHalfController::dT&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/math.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="300"/>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &amp;#039;dT&amp;#039; is less than zero." verbose="The unsigned expression &amp;#039;dT&amp;#039; will never be negative so it is either pointless or an error to check if it is." cwe="570" file0="src/sylib/math.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="146"/>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &amp;#039;dT&amp;#039; is less than zero." verbose="The unsigned expression &amp;#039;dT&amp;#039; will never be negative so it is either pointless or an error to check if it is." cwe="570" file0="src/sylib/math.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="230"/>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &amp;#039;dT&amp;#039; is less than zero." verbose="The unsigned expression &amp;#039;dT&amp;#039; will never be negative so it is either pointless or an error to check if it is." cwe="570" file0="src/sylib/math.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="278"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getCurrentDerivative&amp;#039; is never used." verbose="The function &amp;#039;getCurrentDerivative&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="153"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getCurrentEMA&amp;#039; is never used." verbose="The function &amp;#039;getCurrentEMA&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="21"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getCurrentInputValue&amp;#039; is never used." verbose="The function &amp;#039;getCurrentInputValue&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="155"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getCurrentTime&amp;#039; is never used." verbose="The function &amp;#039;getCurrentTime&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="290"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getCurrentTotal&amp;#039; is never used." verbose="The function &amp;#039;getCurrentTotal&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="43"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getCurrentValue&amp;#039; is never used." verbose="The function &amp;#039;getCurrentValue&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="125"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getEvenCenterSize&amp;#039; is never used." verbose="The function &amp;#039;getEvenCenterSize&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="97"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getKv&amp;#039; is never used." verbose="The function &amp;#039;getKv&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="167"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getMotorGearing&amp;#039; is never used." verbose="The function &amp;#039;getMotorGearing&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="169"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getOddCenterSize&amp;#039; is never used." verbose="The function &amp;#039;getOddCenterSize&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="99"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getQueueLength&amp;#039; is never used." verbose="The function &amp;#039;getQueueLength&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="127"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getQueueMaxLength&amp;#039; is never used." verbose="The function &amp;#039;getQueueMaxLength&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="129"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getTBH&amp;#039; is never used." verbose="The function &amp;#039;getTBH&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="327"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getdT&amp;#039; is never used." verbose="The function &amp;#039;getdT&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="294"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getkA&amp;#039; is never used." verbose="The function &amp;#039;getkA&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="19"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getkD&amp;#039; is never used." verbose="The function &amp;#039;getkD&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="292"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getkH&amp;#039; is never used." verbose="The function &amp;#039;getkH&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="325"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getkI&amp;#039; is never used." verbose="The function &amp;#039;getkI&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="245"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getkP&amp;#039; is never used." verbose="The function &amp;#039;getkP&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="198"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;setkH&amp;#039; is never used." verbose="The function &amp;#039;setkH&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\math.cpp" line="331"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SylviesPogVelocityEstimator::smaFilteredJerk&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SylviesPogVelocityEstimator::smaFilteredJerk&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="13"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SylviesPogVelocityEstimator::smaFilteredSnap&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SylviesPogVelocityEstimator::smaFilteredSnap&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="13"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::internalClock&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::internalClock&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::velocity&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::velocity&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::velocity_error&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::velocity_error&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::raw_velocity&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::raw_velocity&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::vexos_velocity&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::vexos_velocity&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::sma_velocity&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::sma_velocity&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::acceleration&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::acceleration&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::position&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::position&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::temperature&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::temperature&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::power&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::power&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::target_position&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::target_position&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::target_velocity&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::target_velocity&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::current_draw&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::current_draw&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::direction&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::direction&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::efficiency&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::efficiency&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::faults&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::faults&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::flags&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::flags&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::torque&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::torque&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::voltage&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::voltage&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::zero_position_flag&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::zero_position_flag&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::stopped&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::stopped&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::over_temp&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::over_temp&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::over_current&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::over_current&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::brake_mode&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::brake_mode&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::current_limit&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::current_limit&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::voltage_limit&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::voltage_limit&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::sylib_control_mode&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::sylib_control_mode&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::position_target&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::position_target&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::velocity_target&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::velocity_target&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Motor::voltage_target&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Motor::voltage_target&amp;#039; is not initialized in the constructor." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="113"/>
+        </error>
+        <error id="redundantCondition" severity="style" msg="Redundant condition: The condition &amp;#039;voltage_target &amp;gt; 0&amp;#039; is redundant since &amp;#039;voltage_target &amp;gt; 12000&amp;#039; is sufficient." verbose="Redundant condition: The condition &amp;#039;voltage_target &amp;gt; 0&amp;#039; is redundant since &amp;#039;voltage_target &amp;gt; 12000&amp;#039; is sufficient." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="179"/>
+        </error>
+        <error id="redundantCondition" severity="style" msg="Redundant condition: The condition &amp;#039;voltage_target &amp;lt; 0&amp;#039; is redundant since &amp;#039;voltage_target &amp;lt; -12000&amp;#039; is sufficient." verbose="Redundant condition: The condition &amp;#039;voltage_target &amp;lt; 0&amp;#039; is redundant since &amp;#039;voltage_target &amp;lt; -12000&amp;#039; is sufficient." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="181"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;speedController&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;speedController&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="src/sylib/motor.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="114"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getCalculatedkA&amp;#039; is never used." verbose="The function &amp;#039;getCalculatedkA&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="109"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getEmaFilteredVelocity&amp;#039; is never used." verbose="The function &amp;#039;getEmaFilteredVelocity&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="91"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getJerk&amp;#039; is never used." verbose="The function &amp;#039;getJerk&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="105"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getMaxFilteredAcceleration&amp;#039; is never used." verbose="The function &amp;#039;getMaxFilteredAcceleration&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="111"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getMedianFilteredVelocity&amp;#039; is never used." verbose="The function &amp;#039;getMedianFilteredVelocity&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="95"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getPreFilterAcceleration&amp;#039; is never used." verbose="The function &amp;#039;getPreFilterAcceleration&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="101"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getRawPosition&amp;#039; is never used." verbose="The function &amp;#039;getRawPosition&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="89"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getSnap&amp;#039; is never used." verbose="The function &amp;#039;getSnap&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="107"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getVelocityNoCalculations&amp;#039; is never used." verbose="The function &amp;#039;getVelocityNoCalculations&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="85"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_acceleration&amp;#039; is never used." verbose="The function &amp;#039;get_acceleration&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="393"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_amps&amp;#039; is never used." verbose="The function &amp;#039;get_amps&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="423"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_amps_limit&amp;#039; is never used." verbose="The function &amp;#039;get_amps_limit&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="428"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_applied_voltage&amp;#039; is never used." verbose="The function &amp;#039;get_applied_voltage&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="433"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_braking_mode&amp;#039; is never used." verbose="The function &amp;#039;get_braking_mode&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="463"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_d_voltage&amp;#039; is never used." verbose="The function &amp;#039;get_d_voltage&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="353"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_device_timestamp&amp;#039; is never used." verbose="The function &amp;#039;get_device_timestamp&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="458"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_efficiency&amp;#039; is never used." verbose="The function &amp;#039;get_efficiency&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="443"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_estimator_voltage&amp;#039; is never used." verbose="The function &amp;#039;get_estimator_voltage&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="358"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_faults&amp;#039; is never used." verbose="The function &amp;#039;get_faults&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="448"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_flags&amp;#039; is never used." verbose="The function &amp;#039;get_flags&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="453"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_gearing&amp;#039; is never used." verbose="The function &amp;#039;get_gearing&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="468"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_i_voltage&amp;#039; is never used." verbose="The function &amp;#039;get_i_voltage&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="348"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_p_voltage&amp;#039; is never used." verbose="The function &amp;#039;get_p_voltage&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="343"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_position&amp;#039; is never used." verbose="The function &amp;#039;get_position&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="398"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_position_and_timestamp&amp;#039; is never used." verbose="The function &amp;#039;get_position_and_timestamp&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="498"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_position_target&amp;#039; is never used." verbose="The function &amp;#039;get_position_target&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="403"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_smart_port&amp;#039; is never used." verbose="The function &amp;#039;get_smart_port&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="473"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_tbh_voltage&amp;#039; is never used." verbose="The function &amp;#039;get_tbh_voltage&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="363"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_temperature&amp;#039; is never used." verbose="The function &amp;#039;get_temperature&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="408"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_torque&amp;#039; is never used." verbose="The function &amp;#039;get_torque&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="413"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_velocity&amp;#039; is never used." verbose="The function &amp;#039;get_velocity&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="368"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_velocity_error&amp;#039; is never used." verbose="The function &amp;#039;get_velocity_error&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="338"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_velocity_motor_reported&amp;#039; is never used." verbose="The function &amp;#039;get_velocity_motor_reported&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="373"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_velocity_raw&amp;#039; is never used." verbose="The function &amp;#039;get_velocity_raw&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="388"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_velocity_sma_filter_only&amp;#039; is never used." verbose="The function &amp;#039;get_velocity_sma_filter_only&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="378"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_velocity_target&amp;#039; is never used." verbose="The function &amp;#039;get_velocity_target&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="383"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_volts_limit&amp;#039; is never used." verbose="The function &amp;#039;get_volts_limit&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="438"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_watts&amp;#039; is never used." verbose="The function &amp;#039;get_watts&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="418"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;is_over_current&amp;#039; is never used." verbose="The function &amp;#039;is_over_current&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="483"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;is_over_temp&amp;#039; is never used." verbose="The function &amp;#039;is_over_temp&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="488"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;is_reversed&amp;#039; is never used." verbose="The function &amp;#039;is_reversed&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="493"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;is_stopped&amp;#039; is never used." verbose="The function &amp;#039;is_stopped&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="478"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_amps_limit&amp;#039; is never used." verbose="The function &amp;#039;set_amps_limit&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="297"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_braking_mode&amp;#039; is never used." verbose="The function &amp;#039;set_braking_mode&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="291"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_is_reversed&amp;#039; is never used." verbose="The function &amp;#039;set_is_reversed&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="302"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_position_target_absolute&amp;#039; is never used." verbose="The function &amp;#039;set_position_target_absolute&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="249"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_position_target_relative&amp;#039; is never used." verbose="The function &amp;#039;set_position_target_relative&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="256"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_velocity&amp;#039; is never used." verbose="The function &amp;#039;set_velocity&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="319"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_voltage&amp;#039; is never used." verbose="The function &amp;#039;set_voltage&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="285"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;set_volts_limit&amp;#039; is never used." verbose="The function &amp;#039;set_volts_limit&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="308"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;stop&amp;#039; is never used." verbose="The function &amp;#039;stop&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="273"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;tare_encoder&amp;#039; is never used." verbose="The function &amp;#039;tare_encoder&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="313"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;updateSpeedController&amp;#039; is never used." verbose="The function &amp;#039;updateSpeedController&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\motor.cpp" line="325"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &amp;#039;_lock&amp;#039; shadows outer variable" verbose="Local variable &amp;#039;_lock&amp;#039; shadows outer variable" cwe="398" file0="src/sylib/system.cpp" sinceDate="M/d/yyyy">
+            <location file="src\sylib\system.cpp" line="170" info="Shadow variable"/>
+            <location file="src\sylib\system.cpp" line="155" info="Shadowed declaration"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;give&amp;#039; is never used." verbose="The function &amp;#039;give&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\system.cpp" line="41"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;removeSubTaskByID&amp;#039; is never used." verbose="The function &amp;#039;removeSubTaskByID&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="src\sylib\system.cpp" line="103"/>
+        </error>
+    </errors>
+</results>

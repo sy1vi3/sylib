@@ -123,13 +123,10 @@ int SylibDaemon::managerTaskFunction() {
     // start after a long cycle Values offset by 20 to give room for error, the groupings are very
     // tight so it shouldnt matter
 
-    constexpr std::uint64_t SHORT_MICROS_CYCLE_LENGTH = 960 + 20;
     constexpr std::uint64_t LONG_MICROS_CYCLE_LENGTH = 1040 - 20;
     constexpr std::uint64_t AVERAGE_MICROS_CYCLE_LENGTH = 1000;
     constexpr std::uint64_t DIFFERENCE_BETWEEN_AVERAGE_AND_LONG =
         LONG_MICROS_CYCLE_LENGTH - AVERAGE_MICROS_CYCLE_LENGTH;
-    constexpr std::uint64_t DIFFERENCE_BETWEEN_AVERAGE_AND_SHORT =
-        SHORT_MICROS_CYCLE_LENGTH - AVERAGE_MICROS_CYCLE_LENGTH;
 
     uint32_t systemTime = sylib::millis();
     uint32_t detectorPreviousTime = sylib::millis();
@@ -137,7 +134,7 @@ int SylibDaemon::managerTaskFunction() {
     uint64_t prevMicros = systemTimeMicros;
     uint32_t lastCenterControllerPressTime = 0;
     uint32_t centerControllerPressStartTime = 0;
-    bool controllerCenterButtonPressDetected;
+    bool controllerCenterButtonPressDetected = false;
 
     do {
         systemTimeMicros = sylib::micros();
@@ -152,39 +149,44 @@ int SylibDaemon::managerTaskFunction() {
     NOW WE'RE TIMED CORRECTLY, STARTING DAEMON
 
     */
-
+    // int prevFrameCount = 0;
     while (1) {
-        {
-            mutex_lock _lock{mutex};
+        // {
+            // mutex_lock _lock{mutex};
             frameCount++;
-            for (auto& subTask : getLivingSubtasks()) {
-                if (!subTask->getSubTaskPaused() &&
-                    ((frameCount + subTask->getUpdateOffset()) % subTask->getUpdateFrequency() ==
-                     0)) {
-                    subTask->update();
-                }
-            }
-            if (frameCount % 5 == 0) {
-                mutex_lock _lock{sylib_controller_mutexes[0]};
-                if (vexControllerGet(kControllerMaster, static_cast<V5_ControllerIndex>(18))) {
-                    if (!controllerCenterButtonPressDetected) {
-                        centerControllerPressStartTime = systemTime;
-                        controllerCenterButtonPressDetected = true;
-                    }
-                    if (systemTime > centerControllerPressStartTime + 500) {
-                        sylib::Addrled::addrled_enabled = false;
-                    }
-                    lastCenterControllerPressTime = systemTime;
-                } else {
-                    controllerCenterButtonPressDetected = false;
-                    if (systemTime > lastCenterControllerPressTime + 2500) {
-                        sylib::Addrled::addrled_enabled = true;
-                    }
-                }
-            }
-        }
-        sylib::delay_until(&systemTime, 2);
+            printf("%d|%d|%d\n", sylib::millis(), frameCount%100, 0);
+            sylib::delay_until(&systemTime, 2);
     }
+            // for (auto& subTask : getLivingSubtasks()) {
+                
+            //     if (!subTask->getSubTaskPaused() &&
+            //         ((frameCount + subTask->getUpdateOffset()) % subTask->getUpdateFrequency() ==
+            //          0)) {
+            //         subTask->update();
+            //         // printf("%d|%d|%d|%d\n", sylib::millis(), frameCount%100, 1, frameCount);
+            //     }
+            // }
+        //     if (frameCount % 5 == 0) {
+        //         mutex_lock _lock{sylib_controller_mutexes[0]};
+        //         if (vexControllerGet(kControllerMaster, static_cast<V5_ControllerIndex>(18))) {
+        //             if (!controllerCenterButtonPressDetected) {
+        //                 centerControllerPressStartTime = systemTime;
+        //                 controllerCenterButtonPressDetected = true;
+        //             }
+        //             if (systemTime > centerControllerPressStartTime + 500) {
+        //                 sylib::Addrled::addrled_enabled = false;
+        //             }
+        //             lastCenterControllerPressTime = systemTime;
+        //         } else {
+        //             controllerCenterButtonPressDetected = false;
+        //             if (systemTime > lastCenterControllerPressTime + 2500) {
+        //                 sylib::Addrled::addrled_enabled = true;
+        //             }
+        //         }
+        //     }
+        // }
+        
+    
     return 1;
 }
 

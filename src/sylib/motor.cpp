@@ -1,6 +1,7 @@
 #include "sylib/motor.hpp"
 
 #include "sylib/env.hpp"
+#include "system.hpp"
 
 
 #define mg_foreach(func_call, motors)         \
@@ -51,12 +52,13 @@ double SylviesPogVelocityEstimator::getVelocity(double currentMotorTicks,
     if (dT == 0) {
         return outputVelocity;
     }
+    static uint32_t prevTime = sylib::millis();
     dN = currentMotorTicks - oldMotorTicks;
     previousInternalMotorClock = currentInternalMotorClock;
     oldMotorTicks = currentMotorTicks;
     rawVelocity = (dN / 50) / dT * 60000;
     if (std::abs(rawVelocity) > 5000) {  // Motor position reset manually
-        return outputVelocity;
+        // return outputVelocity;
     }
     smaFilteredVelocity = smaFilterVelocity.filter(rawVelocity);
     medianFilteredVelocity = medianFilter.filter(smaFilteredVelocity);
@@ -78,6 +80,10 @@ double SylviesPogVelocityEstimator::getVelocity(double currentMotorTicks,
     outputJerk = outputJerkSolver.solveDerivative(outputAcceleration);
     outputSnap = outputSnapSolver.solveDerivative(outputJerk);
 
+    if(sylib::millis()-prevTime != 10){
+        // printf("%d|%d|%f\n", sylib::millis(), sylib::millis()-prevTime, dT);
+    }
+    prevTime = sylib::millis();
     return outputVelocity;
 }
 
@@ -138,7 +144,6 @@ Motor::Motor(const uint8_t smart_port, const double gearing, const bool reverse,
 
 void Motor::set_motor_controller() {
     static SylibMotorControlMode previousMode;
-    static sylib::EMAFilter velocityPIDFilter = sylib::EMAFilter();
     if (sylib_control_mode != previousMode) {
         motorIController.resetValue();
     }
@@ -199,7 +204,13 @@ void Motor::set_motor_controller() {
 }
 
 void Motor::update() {
+    // static int prevUpdateTime;
+    // static int updateTime;
     mutex_lock _lock(sylib_port_mutexes[smart_port - 1]);
+
+    // updateTime = sylib::millis();
+    // printf("%d\n", updateTime-prevUpdateTime);
+    // prevUpdateTime = updateTime;
 
     position = vexDeviceMotorPositionRawGet(device, &internalClock);
 

@@ -1,0 +1,138 @@
+lv_color_to1
+lv_color_to8
+lv_color_to16
+lv_color_to32
+lv_color_mix
+lv_color_brightness call:[lv_color_to32,return]
+lv_color_hex
+lv_color_hex3
+lv_area_copy call:[memcpy,sizeof] noreturn:[memcpy]
+lv_area_get_width
+lv_area_get_height
+lv_font_get_height
+lv_cont_set_style call:[lv_obj_set_style] noreturn:[lv_obj_set_style]
+lv_cont_get_style call:[lv_obj_get_style] noreturn:[lv_obj_get_style]
+lv_btn_set_layout call:[lv_cont_set_layout] noreturn:[lv_cont_set_layout]
+lv_btn_set_fit call:[lv_cont_set_fit] noreturn:[lv_cont_set_fit]
+lv_btn_get_layout call:[lv_cont_get_layout] noreturn:[lv_cont_get_layout]
+lv_btn_get_hor_fit call:[lv_cont_get_hor_fit] noreturn:[lv_cont_get_hor_fit]
+lv_btn_get_ver_fit call:[lv_cont_get_ver_fit] noreturn:[lv_cont_get_ver_fit]
+lv_imgbtn_set_toggle call:[lv_btn_set_toggle] noreturn:[lv_btn_set_toggle]
+lv_imgbtn_set_state call:[lv_btn_set_state] noreturn:[lv_btn_set_state]
+lv_imgbtn_toggle call:[lv_btn_toggle] noreturn:[lv_btn_toggle]
+lv_imgbtn_set_action call:[lv_btn_set_action] noreturn:[lv_btn_set_action]
+lv_imgbtn_get_state call:[lv_btn_get_state] noreturn:[lv_btn_get_state]
+lv_imgbtn_get_toggle call:[lv_btn_get_toggle] noreturn:[lv_btn_get_toggle]
+lv_imgbtn_get_action call:[lv_btn_get_action] noreturn:[lv_btn_get_action]
+lv_label_set_style call:[lv_obj_set_style] noreturn:[lv_obj_set_style]
+lv_label_get_style call:[lv_obj_get_style] noreturn:[lv_obj_get_style]
+lv_img_set_file
+lv_img_set_style call:[lv_obj_set_style] noreturn:[lv_obj_set_style]
+lv_img_set_upscale
+lv_img_get_style call:[lv_obj_get_style] noreturn:[lv_obj_get_style]
+lv_img_get_upscale
+lv_line_set_style call:[lv_obj_set_style] noreturn:[lv_obj_set_style]
+lv_line_set_upscale
+lv_line_get_style call:[lv_obj_get_style] noreturn:[lv_obj_get_style]
+lv_line_get_upscale
+lv_page_set_scrl_fit call:[lv_cont_set_fit,lv_page_get_scrl] noreturn:[lv_cont_set_fit]
+lv_page_set_scrl_width call:[lv_obj_set_width,lv_page_get_scrl] noreturn:[lv_obj_set_width]
+lv_page_set_scrl_height call:[lv_obj_set_height,lv_page_get_scrl] noreturn:[lv_obj_set_height]
+lv_page_set_scrl_layout call:[lv_cont_set_layout,lv_page_get_scrl] noreturn:[lv_cont_set_layout]
+lv_page_get_scrl_width call:[lv_obj_get_width,lv_page_get_scrl] noreturn:[lv_obj_get_width]
+lv_page_get_scrl_height call:[lv_obj_get_height,lv_page_get_scrl] noreturn:[lv_obj_get_height]
+lv_page_get_scrl_layout call:[lv_cont_get_layout,lv_page_get_scrl] noreturn:[lv_cont_get_layout]
+lv_page_get_scrl_hor_fit call:[lv_cont_get_hor_fit,lv_page_get_scrl] noreturn:[lv_cont_get_hor_fit]
+lv_page_get_scrl_fit_ver call:[lv_cont_get_ver_fit,lv_page_get_scrl] noreturn:[lv_cont_get_ver_fit]
+lv_list_set_sb_mode call:[lv_page_set_sb_mode] noreturn:[lv_page_set_sb_mode]
+lv_list_set_scroll_propagation call:[lv_page_set_scroll_propagation] noreturn:[lv_page_set_scroll_propagation]
+lv_list_set_edge_flash call:[lv_page_set_edge_flash] noreturn:[lv_page_set_edge_flash]
+lv_list_get_sb_mode call:[lv_page_get_sb_mode] noreturn:[lv_page_get_sb_mode]
+lv_list_get_scroll_propagation call:[lv_page_get_scroll_propagation] noreturn:[lv_page_get_scroll_propagation]
+lv_list_get_edge_flash call:[lv_page_get_edge_flash] noreturn:[lv_page_get_edge_flash]
+lv_chart_set_style call:[lv_obj_set_style] noreturn:[lv_obj_set_style]
+lv_chart_get_style call:[lv_obj_get_style] noreturn:[lv_obj_get_style]
+lv_cb_set_checked call:[lv_btn_set_state] noreturn:[lv_btn_set_state]
+lv_cb_set_inactive call:[lv_btn_set_state] noreturn:[lv_btn_set_state]
+lv_cb_set_action call:[lv_btn_set_action] noreturn:[lv_btn_set_action]
+lv_cb_is_checked call:[lv_btn_get_state]
+lv_cb_get_action call:[lv_btn_get_action] noreturn:[lv_btn_get_action]
+lv_slider_set_value call:[lv_bar_set_value] noreturn:[lv_bar_set_value]
+lv_slider_set_value_anim call:[lv_bar_set_value_anim] noreturn:[lv_bar_set_value_anim]
+lv_slider_set_range call:[lv_bar_set_range] noreturn:[lv_bar_set_range]
+lv_slider_get_min_value call:[lv_bar_get_min_value] noreturn:[lv_bar_get_min_value]
+lv_slider_get_max_value call:[lv_bar_get_max_value] noreturn:[lv_bar_get_max_value]
+lv_led_set_style call:[lv_obj_set_style] noreturn:[lv_obj_set_style]
+lv_led_get_style call:[lv_obj_get_style] noreturn:[lv_obj_get_style]
+lv_kb_set_map call:[lv_btnm_set_map] noreturn:[lv_btnm_set_map]
+lv_ddlist_set_sb_mode call:[lv_page_set_sb_mode] noreturn:[lv_page_set_sb_mode]
+lv_ddlist_get_sb_mode call:[lv_page_get_sb_mode] noreturn:[lv_page_get_sb_mode]
+lv_roller_set_options call:[lv_ddlist_set_options] noreturn:[lv_ddlist_set_options]
+lv_roller_set_action call:[lv_ddlist_set_action] noreturn:[lv_ddlist_set_action]
+lv_roller_set_hor_fit call:[lv_ddlist_set_hor_fit] noreturn:[lv_ddlist_set_hor_fit]
+lv_roller_set_anim_time call:[lv_ddlist_set_anim_time] noreturn:[lv_ddlist_set_anim_time]
+lv_roller_get_options call:[lv_ddlist_get_options] noreturn:[lv_ddlist_get_options]
+lv_roller_get_selected call:[lv_ddlist_get_selected] noreturn:[lv_ddlist_get_selected]
+lv_roller_get_selected_str call:[lv_ddlist_get_selected_str] noreturn:[lv_ddlist_get_selected_str]
+lv_roller_get_action call:[lv_ddlist_get_action] noreturn:[lv_ddlist_get_action]
+lv_roller_get_anim_time call:[lv_ddlist_get_anim_time] noreturn:[lv_ddlist_get_anim_time]
+lv_ta_set_action call:[lv_page_set_rel_action] noreturn:[lv_page_set_rel_action]
+lv_ta_set_sb_mode call:[lv_page_set_sb_mode] noreturn:[lv_page_set_sb_mode]
+lv_ta_set_scroll_propagation call:[lv_page_set_scroll_propagation] noreturn:[lv_page_set_scroll_propagation]
+lv_ta_set_edge_flash call:[lv_page_set_edge_flash] noreturn:[lv_page_set_edge_flash]
+lv_ta_get_action call:[lv_page_get_rel_action] noreturn:[lv_page_get_rel_action]
+lv_ta_get_sb_mode call:[lv_page_get_sb_mode] noreturn:[lv_page_get_sb_mode]
+lv_ta_get_scroll_propagation call:[lv_page_get_scroll_propagation] noreturn:[lv_page_get_scroll_propagation]
+lv_ta_get_edge_flash call:[lv_page_get_edge_flash] noreturn:[lv_page_get_edge_flash]
+lv_win_get_drag call:[lv_obj_get_drag] noreturn:[lv_obj_get_drag]
+lv_win_scroll_hor call:[lv_obj_get_ext_attr,lv_page_scroll_hor] noreturn:[lv_page_scroll_hor]
+lv_win_scroll_ver call:[lv_obj_get_ext_attr,lv_page_scroll_ver] noreturn:[lv_page_scroll_ver]
+lv_tileview_set_edge_flash call:[lv_page_set_edge_flash] noreturn:[lv_page_set_edge_flash]
+lv_tileview_get_edge_flash call:[lv_page_get_edge_flash] noreturn:[lv_page_get_edge_flash]
+lv_lmeter_set_style call:[lv_obj_set_style] noreturn:[lv_obj_set_style]
+lv_lmeter_get_style call:[lv_obj_get_style] noreturn:[lv_obj_get_style]
+lv_gauge_set_range call:[lv_lmeter_set_range] noreturn:[lv_lmeter_set_range]
+lv_gauge_set_critical_value call:[lv_lmeter_set_value] noreturn:[lv_lmeter_set_value]
+lv_gauge_set_style call:[lv_obj_set_style] noreturn:[lv_obj_set_style]
+lv_gauge_get_min_value call:[lv_lmeter_get_min_value] noreturn:[lv_lmeter_get_min_value]
+lv_gauge_get_max_value call:[lv_lmeter_get_max_value] noreturn:[lv_lmeter_get_max_value]
+lv_gauge_get_critical_value call:[lv_lmeter_get_value] noreturn:[lv_lmeter_get_value]
+lv_gauge_get_line_count call:[lv_lmeter_get_line_count] noreturn:[lv_lmeter_get_line_count]
+lv_gauge_get_scale_angle call:[lv_lmeter_get_scale_angle] noreturn:[lv_lmeter_get_scale_angle]
+lv_gauge_get_style call:[lv_obj_get_style] noreturn:[lv_obj_get_style]
+lv_sw_set_action call:[lv_slider_set_action] noreturn:[lv_slider_set_action]
+lv_sw_get_state call:[lv_bar_get_value]
+lv_sw_get_action call:[lv_slider_get_action] noreturn:[lv_slider_get_action]
+lv_spinbox_set_style call:[lv_ta_set_style] noreturn:[lv_ta_set_style]
+lv_spinbox_get_style call:[lv_ta_get_style] noreturn:[lv_ta_get_style]
+Gps
+Gps call:[gps_set_position] noreturn:[gps_set_position]
+Gps call:[gps_set_offset] noreturn:[gps_set_offset]
+Gps call:[gps_initialize_full] noreturn:[gps_initialize_full]
+Imu
+convert_args
+convert_args call:[c_str] noreturn:[c_str]
+print call:[convert_args,lcd_print] noreturn:[lcd_print]
+convert_args
+convert_args call:[c_str] noreturn:[c_str]
+print call:[controller_print,convert_args] noreturn:[controller_print]
+create call:[static_assert,task_create,void] noreturn:[task_create]
+create call:[create] noreturn:[create]
+Task call:[static_assert] noreturn:[static_assert]
+Task
+operatorvoid*
+try_lock_for call:[count,take] noreturn:[take]
+try_lock_until call:[count,max,now,take] noreturn:[take]
+MutexVarLock
+operator*
+operator.
+MutexVarLock call:[unlock] noreturn:[unlock]
+MutexVar
+try_lock call:[take]
+try_lock call:[count,try_lock] noreturn:[try_lock]
+lock call:[take]
+Rotation
+convert_args
+convert_args call:[c_str] noreturn:[c_str]
+print call:[convert_args,screen_print] noreturn:[screen_print]
+print call:[convert_args,screen_print_at] noreturn:[screen_print_at]
