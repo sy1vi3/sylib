@@ -86,9 +86,6 @@ double SylviesPogVelocityEstimator::getVelocity(double currentMotorTicks,
     outputJerk = outputJerkSolver.solveDerivative(outputAcceleration);
     outputSnap = outputSnapSolver.solveDerivative(outputJerk);
 
-    if(sylib::millis()-prevTime != 10){
-        // printf("%d|%d|%f\n", sylib::millis(), sylib::millis()-prevTime, dT);
-    }
     prevTime = sylib::millis();
     return outputVelocity;
 }
