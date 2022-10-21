@@ -1,5 +1,15 @@
-#include "sylib/addrled.hpp"
+/**
+ * \file src/sylib/addrled.cpp
+ *
+ * \brief Contains definitions for functions relating to individually
+ * addressable LED strips for the V5
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
 
+#include "sylib/addrled.hpp"
 #include "sylib/env.hpp"
 #include "sylib/sylib_apitypes.hpp"
 #include "sylib/system.hpp"

@@ -1,8 +1,12 @@
 /**
- * \file sylib/system.hpp
+ * \file include/sylib/system.hpp
  *
  * \brief Contains prototypes for functions relating to sylib's background
  * processes
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
 #pragma once
@@ -172,7 +176,7 @@ class SylibDaemon {
      * \return Theoretically 1, but this function should never return on account
      * of the while(1) loop
      */
-    static int managerTaskFunction();
+    [[noreturn]] static int managerTaskFunction();
 
     /**
      * \brief Adds a Device object or one of its child classes to the daemon's

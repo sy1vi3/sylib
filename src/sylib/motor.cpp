@@ -1,13 +1,19 @@
-#include "sylib/motor.hpp"
+/**
+ * \file src/sylib/math.cpp
+ *
+ * \brief Contains definitions for functions relating to smart motor
+ * control and telemetry
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
 
+
+#include "sylib/motor.hpp"
 #include "sylib/env.hpp"
 #include "system.hpp"
 
-
-#define mg_foreach(func_call, motors)         \
-    for (int i = 0; i < motors.size(); i++) { \
-        motors[i].func_call;                  \
-    }
 
 namespace sylib {
 SylviesPogVelocityEstimator::SylviesPogVelocityEstimator(double motorGearing)

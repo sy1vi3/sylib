@@ -107,9 +107,8 @@ void SylibDaemon::removeSubTaskByID(int idToKill) {
                        [&](sylib::Device* x) { return (x->getSubTaskID() == idToKill); }));
 }
 
-int SylibDaemon::managerTaskFunction() {
+[[noreturn]] int SylibDaemon::managerTaskFunction() {
     printf("\nstarted sylib daemon\n");
-
     /*
 
     THIS SECTION TAKES CARE OF DESYNCING SYLIB DAEMON WITH VEX BACKGROUND PROCESSING
@@ -149,45 +148,38 @@ int SylibDaemon::managerTaskFunction() {
     NOW WE'RE TIMED CORRECTLY, STARTING DAEMON
 
     */
-    // int prevFrameCount = 0;
     while (1) {
-        // {
-            // mutex_lock _lock{mutex};
+        {
+            mutex_lock _lock{mutex};
             frameCount++;
-            printf("%d|%d|%d\n", sylib::millis(), frameCount%100, 0);
-            sylib::delay_until(&systemTime, 2);
-    }
-            // for (auto& subTask : getLivingSubtasks()) {
+            for (auto& subTask : getLivingSubtasks()) {
                 
-            //     if (!subTask->getSubTaskPaused() &&
-            //         ((frameCount + subTask->getUpdateOffset()) % subTask->getUpdateFrequency() ==
-            //          0)) {
-            //         subTask->update();
-            //         // printf("%d|%d|%d|%d\n", sylib::millis(), frameCount%100, 1, frameCount);
-            //     }
-            // }
-        //     if (frameCount % 5 == 0) {
-        //         mutex_lock _lock{sylib_controller_mutexes[0]};
-        //         if (vexControllerGet(kControllerMaster, static_cast<V5_ControllerIndex>(18))) {
-        //             if (!controllerCenterButtonPressDetected) {
-        //                 centerControllerPressStartTime = systemTime;
-        //                 controllerCenterButtonPressDetected = true;
-        //             }
-        //             if (systemTime > centerControllerPressStartTime + 500) {
-        //                 sylib::Addrled::addrled_enabled = false;
-        //             }
-        //             lastCenterControllerPressTime = systemTime;
-        //         } else {
-        //             controllerCenterButtonPressDetected = false;
-        //             if (systemTime > lastCenterControllerPressTime + 2500) {
-        //                 sylib::Addrled::addrled_enabled = true;
-        //             }
-        //         }
-        //     }
-        // }
-        
-    
-    return 1;
+                if (!subTask->getSubTaskPaused() &&
+                    ((frameCount + subTask->getUpdateOffset()) % subTask->getUpdateFrequency() ==
+                     0)) {
+                    subTask->update();
+                }
+            }
+            if (frameCount % 5 == 0) {
+                mutex_lock _lock{sylib_controller_mutexes[0]};
+                if (vexControllerGet(kControllerMaster, static_cast<V5_ControllerIndex>(18))) {
+                    if (!controllerCenterButtonPressDetected) {
+                        centerControllerPressStartTime = systemTime;
+                        controllerCenterButtonPressDetected = true;
+                    }
+                    if (systemTime > centerControllerPressStartTime + 500) {
+                        sylib::Addrled::addrled_enabled = false;
+                    }
+                    lastCenterControllerPressTime = systemTime;
+                } else {
+                    controllerCenterButtonPressDetected = false;
+                    if (systemTime > lastCenterControllerPressTime + 2500) {
+                        sylib::Addrled::addrled_enabled = true;
+                    }
+                }
+            }
+        }
+    }
 }
 
 int SylibDaemon::frameCount = 0;

@@ -1,8 +1,12 @@
 /**
- * \file sylib/motor.hpp
+ * \file include/sylib/motor.hpp
  *
  * \brief Contains prototypes for functions relating to smart motor
  * control and telemetry
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
 #pragma once
