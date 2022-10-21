@@ -64,7 +64,7 @@ double SylviesPogVelocityEstimator::getVelocity(double currentMotorTicks,
     oldMotorTicks = currentMotorTicks;
     rawVelocity = (dN / 50) / dT * 60000;
     if (std::abs(rawVelocity) > 5000) {  // Motor position reset manually
-        // return outputVelocity;
+        return outputVelocity;
     }
     smaFilteredVelocity = smaFilterVelocity.filter(rawVelocity);
     medianFilteredVelocity = medianFilter.filter(smaFilteredVelocity);
