@@ -85,14 +85,15 @@ void opcontrol() {
 	// Create an addrled object
 
 	// auto flywheel = sylib::Motor(17, 3600, true, flywheelController);
-	
+	auto a = sylib::Addrled(1,1, 16);
+    a.set_all(0x333333);
 	// Store the time at the start of the loop
     std::uint32_t clock = sylib::millis();
     while (true) {
 		// flywheel.set_velocity_custom_controller(2700);
         // flywheel.set_velocity_custom_controller(0);
 		// 10ms delay to allow other tasks to run
-
+        printf("f\n");
         sylib::delay_until(&clock, 10);
     }
 }

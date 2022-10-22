@@ -153,7 +153,6 @@ void SylibDaemon::removeSubTaskByID(int idToKill) {
             mutex_lock _lock{mutex};
             frameCount++;
             for (auto& subTask : getLivingSubtasks()) {
-                
                 if (!subTask->getSubTaskPaused() &&
                     ((frameCount + subTask->getUpdateOffset()) % subTask->getUpdateFrequency() ==
                      0)) {
@@ -178,6 +177,7 @@ void SylibDaemon::removeSubTaskByID(int idToKill) {
                     }
                 }
             }
+            sylib::delay_until(&systemTime, 2);
         }
     }
 }
