@@ -10,10 +10,10 @@
  */
 
 #pragma once
-#include "env.hpp"
-#include "sylib.hpp"
-#include "sylib_apitypes.hpp"
-#include "system.hpp"
+#include "sylib/env.hpp"
+#include "sylib/math.hpp"
+#include "sylib/system.hpp"
+#include "sylib/sylib_apitypes.hpp"
 
 namespace sylib {
 

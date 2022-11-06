@@ -11,8 +11,7 @@
 
 #pragma once
 
-#include "env.hpp"
-#include "system.hpp"
+#include "sylib/env.hpp"
 
 namespace sylib {
 #ifdef SYLIB_ENV_PROS

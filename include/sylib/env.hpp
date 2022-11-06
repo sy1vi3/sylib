@@ -7,7 +7,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
-
+#pragma once
 #include <stdint.h>
 
 #include <algorithm>
@@ -26,7 +26,7 @@
 #include <string>
 #include <vector>
 
-// #define SYLIB_SRC_PRESENT
+#define SYLIB_SRC_PRESENT
 #define SYLIB_ENV_PROS
 
 // #define SYLIB_ENV_VEXCODE
