@@ -19,7 +19,7 @@ Sylvie's C++ Library For V5
 
 ### PROS
 
-1) Download the latest version of the Sylib template from the [Releases] page
+1) Download the latest version of the Sylib template from the [Releases](https://github.com/SylvieMayer/sylib/releases/tag/1.0.0) page
 
 2) In the directory where you downloaded the zip archive, run `pros c fetch sylib@<version>.zip`
 
@@ -38,7 +38,7 @@ note: Sylib requires PROS kernel `3.7.2` or later to run
 
 ### VEXcode/VEX Visual Studio Code Extension
 
-1) From the [Releases] page, download the latest version of the Sylib source code 
+1) From the [Releases](https://github.com/SylvieMayer/sylib/releases/tag/1.0.0) page, download the latest version of the Sylib source code 
 
 2) Copy the contents of the `include/` directory from the downloaded files into the `include/` directory of your project
 
