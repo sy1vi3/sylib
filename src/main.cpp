@@ -1,6 +1,4 @@
 #include "main.h"
-#include "sylib/motor.hpp"
-#include "sylib/system.hpp"
 #include <cstdint>
 #include <vector>
 
@@ -63,37 +61,13 @@ void initialize() {
 	sylib::initialize();
 }
 
-sylib::SpeedControllerInfo flywheelController (
-        [](double rpm){return std::pow(M_E, (-0.001*rpm* 3600 / 3600 + 1)) + 3.125;}, // kV function
-        10, // kP
-        0.001, // kI
-        0, // kD
-        0, // kH
-        true, // anti-windup enabled
-        50, // anti-windup range
-        true, // p controller bounds threshold enabled
-        50, // p controller bounds cutoff enabled
-        0.01, // kP2 for when over threshold
-        50, // range to target to apply max voltage
-        false, // coast down enabled
-        0,  // coast down theshhold
-        1 // coast down constant
-);
 
 void opcontrol() {
     
-	// Create an addrled object
-
-	// auto flywheel = sylib::Motor(17, 3600, true, flywheelController);
-	auto a = sylib::Addrled(1,1, 16);
-    a.set_all(0x333333);
 	// Store the time at the start of the loop
     std::uint32_t clock = sylib::millis();
     while (true) {
-		// flywheel.set_velocity_custom_controller(2700);
-        // flywheel.set_velocity_custom_controller(0);
-		// 10ms delay to allow other tasks to run
-        printf("f\n");
+
         sylib::delay_until(&clock, 10);
     }
 }

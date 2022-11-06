@@ -37,6 +37,7 @@ include/pros
 include/display
 include/api.h
 include/main.h 
+include/pros.h
 
 
 # Source

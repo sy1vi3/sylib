@@ -245,6 +245,17 @@ class Addrled : private Device {
      */
     void color_shift(int red, int green, int blue);
 
+    // /**
+    //  * \brief Fades the entire light strip through the provided colors
+    //  *
+    //  * \param colors
+    //  *        A vector containing hex codes for colors to fade between
+    //  *
+    //  * \param speed
+    //  *        A vector containing hex codes for colors to fade between
+    //  */
+    // void color_fade(std::vector<std::uint32_t> colors, int speed);
+
     /**
      * \brief Gets smart port number used by the ADI expander for the light strip
      *

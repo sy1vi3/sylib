@@ -88,7 +88,8 @@ void Addrled::update() {
 
     if (addrledControlMode == SylibAddrledControlModeMANUAL) {
         lightOutput = buffer;
-    } else if (addrledControlMode == SylibAddrledControlModeCYCLE) {
+    } 
+    else if (addrledControlMode == SylibAddrledControlModeCYCLE) {
         for (std::size_t i = 0; i < buffer.size(); i++) {
             if (rotation_buffer[i] <= 0xFFFFFF) {
                 buffer[i] = rotation_buffer[i];
@@ -242,6 +243,18 @@ void Addrled::pulse(std::uint32_t color, int pulse_width, int speed, int start_p
     }
     pulseStartMovementTime = sylib::millis();
 }
+
+// void Addrled::color_fade(std::vector<std::uint32_t> colors, int speed){
+//     mutex_lock _lock(sylib_port_mutexes[smart_port - 1]);
+//     addrledControlMode = SylibAddrledControlModeFADE;
+//     if (speed > 100) {
+//         speed = 100;
+//     } else if (speed < 1) {
+//         speed = 1;
+//     }
+//     controlSpeed = 250.0 / speed;
+
+// }
 
 std::uint32_t Addrled::interpolate_rgb(std::uint32_t start_color, std::uint32_t end_color, int step,
                                        int fade_width) {

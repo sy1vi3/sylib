@@ -26,6 +26,7 @@ typedef enum {
     SylibAddrledControlModeOFF = 0,
     SylibAddrledControlModeMANUAL = 1,
     SylibAddrledControlModePULSE = 2,
-    SylibAddrledControlModeCYCLE = 3
+    SylibAddrledControlModeCYCLE = 3,
+    SylibAddrledControlModeFADE = 4
 } SylibAddrledControlMode;
 }  // namespace sylib
