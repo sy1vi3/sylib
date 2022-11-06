@@ -26,7 +26,7 @@
 #include <string>
 #include <vector>
 
-#define SYLIB_SRC_PRESENT
+// #define SYLIB_SRC_PRESENT
 #define SYLIB_ENV_PROS
 
 // #define SYLIB_ENV_VEXCODE
