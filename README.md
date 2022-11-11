@@ -12,7 +12,7 @@ Sylvie's C++ Library For V5
 - Accurate motor velocity measurements
 - Template for making custom velocity controllers
 - Many kinds of pre-built filters for general use
-- Platform-agnostic, meaning it works with both PROS and VEXcode
+- Platform-agnostic, meaning it works with both PROS and VEXcode (VSC Extension) 
 
 
 ## Installation
@@ -36,7 +36,9 @@ provided by the template instead of trying to build it from the non-existent sou
 note: Sylib requires PROS kernel `3.7.2` or later to run
 
 
-### VEXcode/VEX Visual Studio Code Extension
+### VEXcode (VEX Visual Studio Code Extension)
+
+  > Note that this will not work in the VEXcode app itself due to file structure weirdness. It works fine in the VSC extension.
 
 1) From the [Releases](https://github.com/SylvieMayer/sylib/releases/tag/1.0.0) page, download the latest version of the Sylib source code 
 
