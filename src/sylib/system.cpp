@@ -3,10 +3,6 @@
 #include "sylib/addrled.hpp"
 #include "sylib/env.hpp"
 
-namespace {
-  std::vector<sylib::Device*> livingSubtasks{};
-  sylib::Mutex livingSubtasksMutex{};
-}
 
 namespace sylib {
 void delay_until(std::uint32_t* const prev_time, const std::uint32_t delta) {
@@ -57,9 +53,10 @@ Mutex sylib_controller_mutexes[2];
 
 SylibDaemon::SylibDaemon() {}
 
-// std::vector<sylib::Device*>& SylibDaemon::getLivingSubtasks() {
-//     return livingSubtasks;
-// }
+std::vector<sylib::Device*>& SylibDaemon::getLivingSubtasks() {
+    static auto livingSubtasks = std::vector<sylib::Device*>();
+    return livingSubtasks;
+}
 
 void SylibDaemon::startSylibDaemon() {
     static bool daemonStarted = false;
@@ -87,8 +84,7 @@ SylibDaemon& SylibDaemon::getInstance() {
 
 int SylibDaemon::createSubTaskUnsafe(sylib::Device* objectPointerToSchedule) {
     subTasksCreated++;
-    mutex_lock _lock_(livingSubtasksMutex);
-    livingSubtasks.push_back(objectPointerToSchedule);
+    getLivingSubtasks().push_back(objectPointerToSchedule);
     return subTasksCreated;
 }
 
@@ -100,16 +96,14 @@ int SylibDaemon::createSubTask(sylib::Device* objectPointerToSchedule) {
 
 void SylibDaemon::removeSubTask(sylib::Device* objectPointerToSchedule) {
     mutex_lock _lock(mutex);
-    mutex_lock _lock_(livingSubtasksMutex);
-    livingSubtasks.erase(std::remove(livingSubtasks.begin(), livingSubtasks.begin(),
+    getLivingSubtasks().erase(std::remove(getLivingSubtasks().begin(), getLivingSubtasks().begin(),
                                           objectPointerToSchedule));
 }
 
 void SylibDaemon::removeSubTaskByID(int idToKill) {
     mutex_lock _lock(mutex);
-    mutex_lock _lock_(livingSubtasksMutex);
-    livingSubtasks.erase(
-        std::remove_if(livingSubtasks.begin(), livingSubtasks.end(),
+    getLivingSubtasks().erase(
+        std::remove_if(getLivingSubtasks().begin(), getLivingSubtasks().end(),
                        [&](sylib::Device* x) { return (x->getSubTaskID() == idToKill); }));
 }
 
@@ -157,9 +151,8 @@ void SylibDaemon::removeSubTaskByID(int idToKill) {
     while (1) {
         {
             mutex_lock _lock{mutex};
-            mutex_lock _lock_(livingSubtasksMutex);
             frameCount++;
-            for (auto& subTask : livingSubtasks) {
+            for (auto& subTask : getLivingSubtasks()) {
                 if (!subTask->getSubTaskPaused() &&
                     ((frameCount + subTask->getUpdateOffset()) % subTask->getUpdateFrequency() ==
                      0)) {

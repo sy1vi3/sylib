@@ -117,7 +117,6 @@ using mutex_lock = const std::lock_guard<sylib::Mutex>;
 
 class Device;
 
-
 /**
  * \brief Sylib System Daemon
  *
@@ -133,7 +132,7 @@ class SylibDaemon {
     const SylibDaemon& operator=(const SylibDaemon&) = delete;
     std::unique_ptr<sylib::Task> managerTask = nullptr;
     static int subTasksCreated;
-    // static std::vector<sylib::Device*>& getLivingSubtasks();
+    static std::vector<sylib::Device*>& getLivingSubtasks();
     static int frameCount;
 
    public:
