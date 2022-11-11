@@ -14,6 +14,11 @@
 #include "sylib/sylib_apitypes.hpp"
 #include "sylib/system.hpp"
 
+namespace {
+  std::vector<sylib::Addrled*> allAddrleds{};
+  sylib::Mutex allAddrledsMutex{};
+}
+
 namespace sylib {
 Addrled::Addrled(const uint8_t smart_port, const uint8_t adi_port, const uint8_t strip_length,
                  std::vector<uint32_t> colors)
@@ -26,8 +31,8 @@ Addrled::Addrled(const uint8_t smart_port, const uint8_t adi_port, const uint8_t
     if (sylib::millis() > 1) {
         _lock = std::unique_lock<sylib::Mutex>(sylib_port_mutexes[smart_port - 1]);
     }
-    getAllAddrleds().push_back(this);
-    setAddrledUpdateCycles(getAllAddrleds().size());
+    allAddrleds.push_back(this);
+    setAddrledUpdateCycles(allAddrleds.size());
     vexDeviceAdiPortConfigSet(device, adi_port - 1, kAdiPortTypeDigitalOut);
     buffer.resize(strip_length);
     colors.resize(strip_length);
@@ -41,7 +46,8 @@ Addrled::Addrled(const uint8_t smart_port, const uint8_t adi_port, const uint8_t
 }
 
 Addrled::~Addrled() {
-    getAllAddrleds().erase(std::remove(getAllAddrleds().begin(), getAllAddrleds().begin(), this));
+    mutex_lock _lock_(allAddrledsMutex);
+    allAddrleds.erase(std::remove(allAddrleds.begin(), allAddrleds.begin(), this));
 }
 
 std::uint32_t& Addrled::operator[](std::uint32_t index) { return buffer[index]; }
@@ -51,14 +57,15 @@ std::vector<uint32_t>& Addrled::operator*() { return buffer; }
 bool Addrled::addrled_enabled = true;
 const std::vector<uint32_t> Addrled::off_buffer = std::vector<uint32_t>(64, 0x000000);
 
-std::vector<sylib::Addrled*>& Addrled::getAllAddrleds() {
-    static auto allAddrleds = std::vector<sylib::Addrled*>();
-    return allAddrleds;
-}
+// std::vector<sylib::Addrled*>& Addrled::getAllAddrleds() {
+//     static auto allAddrleds = std::vector<sylib::Addrled*>();
+//     return allAddrleds;
+// }
 
 void Addrled::setAddrledUpdateCycles(int count) {
     int addrledCount = 0;
-    for (auto& subTask : getAllAddrleds()) {
+    mutex_lock _lock_(allAddrledsMutex);
+    for (auto& subTask : allAddrleds) {
         subTask->setUpdateFrequency(6 * count);
         subTask->setUpdateOffset(6 * addrledCount);
         addrledCount++;
