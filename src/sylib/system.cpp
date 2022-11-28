@@ -96,7 +96,7 @@ int SylibDaemon::createSubTask(sylib::Device* objectPointerToSchedule) {
 
 void SylibDaemon::removeSubTask(sylib::Device* objectPointerToSchedule) {
     mutex_lock _lock(mutex);
-    getLivingSubtasks().erase(std::remove(getLivingSubtasks().begin(), getLivingSubtasks().begin(),
+    getLivingSubtasks().erase(std::remove(getLivingSubtasks().begin(), getLivingSubtasks().end(),
                                           objectPointerToSchedule));
 }
 

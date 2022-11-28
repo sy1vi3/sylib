@@ -41,7 +41,7 @@ Addrled::Addrled(const uint8_t smart_port, const uint8_t adi_port, const uint8_t
 }
 
 Addrled::~Addrled() {
-    getAllAddrleds().erase(std::remove(getAllAddrleds().begin(), getAllAddrleds().begin(), this));
+    getAllAddrleds().erase(std::remove(getAllAddrleds().begin(), getAllAddrleds().end(), this));
 }
 
 std::uint32_t& Addrled::operator[](std::uint32_t index) { return buffer[index]; }
